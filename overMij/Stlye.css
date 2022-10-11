@@ -23,11 +23,22 @@ p {
 
 }
 
+
+
+
 /* Knoppen */
 .Button {
-    background-color: white;
     border-radius: 5%;
+    transition: background-color 2s ease-out 100ms
 }
+
+.button:hover  {
+    color: black;
+    background-color: white;
+    text-decoration: underline;
+}
+
+
 
 
 /* Text kleuren */
@@ -35,6 +46,12 @@ p {
     color: brown;
 }
 
+
+.Yellow {
+    color: yellow;
+}
+
 #Name {
     color: yellow;
 }
+
