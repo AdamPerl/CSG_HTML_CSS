@@ -3,107 +3,78 @@
     margin: 0;
     padding: 0;
     background: #262626;
+    box-sizing: border-box;
 }
 
-/*De binnenkant van de website*/
-.Main {
-    background: #5d524c;
-    color: #c8c3bf;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    size: 14px;
-}
-
-#vogel {
-    width: 225px;
-    height: auto;
+body {
+    padding: 5%; /*zodat de Boxes niet in de middel zijn*/
 }
 
 
+/*--[[ De binnenkant van de website ]]--*/
+
+.box {
+
+    margin-top: 20px;
+    background-color: #383838;
+    padding: 20px;
+    border-radius: 10px; /*geeft border*/
+
+}
+
+
+
+/*--[[ nav bar Css ]]-- (deco zodat het mij duidelijk opvalt)*/
+.bar {
+    height: 50vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+/*nav bar content*/
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: bold; 
+}
+
+/*The List objext in the nav bar*/
+nav ul li {
+    display: inline-block;
+    padding: 10px 20px;
+}
+/*De knoppen in de nav bar*/
+nav ul li a {
+    text-decoration: none; /*Haalt de underline weg*/
+    font-weight: bold; /*Maakt het BOLD*/
+}
+
+nav ul li a:hover { /*Hover effect*/
+    color: yellow;
+    transition: .5s;
+}
+
+/*Geeft de "current page" een andere kleur*/
+.Active {
+    color: yellow;
+}
 
 /*Header Code*/
-.horizontaal {
-    margin: 20px auto;
-    background-color: red;
-    float: right;
-}
-
-.List li {
-    display: inline-block;
-    text-align: center;
-    margin: 0px 20px;
-}
-
-.header {
-    width: 100%;
-    height: 15%;
-    background-color: darkgoldenrod;
-    padding-left: 10%;
-}
-
-
-/*https://codepen.io/dig-lopes/pen/WLVGda?editors=1100*/
-
-  .FooterList {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .FooterList li {
-    list-style: none;
-    margin: 0 15px;
-  }
-  
-  .FooterList li a {
-    position: relative; 
-    display: block;
-    width: 60px;
-    height: 60px;
-    text-align: center;
-    line-height: 63px;
-    background: #333;
-    border-radius: 50%;
-    font-size: 30px;
-    color: #666;
-    transition: .5s;
-  }
-  
-  .FooterList li a::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: #ffee10;
-    transition: .5s;
-    transform: scale(.9);
-    z-index: -1;
-  }
-  
-  .FooterList li a:hover::before {
-    transform: scale(1.1);
-    box-shadow: 0 0 15px #ffee10;
-  }
-  
-  .FooterList li a:hover {
-    color: #ffee10;
-    box-shadow: 0 0 5px #ffee10;
-    text-shadow: 0 0 5px #ffee10;
-  }
-
 
 /*Globale knop*/
-.Button {
-
+Button {
+    border: none;
+    background: yellow;
+    padding: 15px 35px;
+    color: black;
 }
 
 /*Globale knop Hover Effect*/
-.Button:hover {
-
+Button:hover {
+    color: yellow;
+    background: black;
 }
