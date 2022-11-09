@@ -1,41 +1,63 @@
+/*
+    
+https://www.w3schools.com/cssref/css_selectors.php -- OBJ::________
+ color scheme van linear
+ background: rgb(0, 2, 18);
+
+
+*/
+
+
+
+
+
 /* --[[ Globale dingen]]--  (deco zodat het mij duidelijker opvalt)*/
 * {
-    color: white;
+    color: #ffffff;
 }
 
 body {
-    background: #262626;
+    background: rgb(0, 2, 18);
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: anitialized;
 }
 
 body #main {
     padding: 5%; /*zodat de Boxes niet in de middel zijn*/
+    margin-top: 100px; /*Zodat de nav bar niet over de boxes heen gaan*/
 }
 
 Button {
     border: none;
-    background: yellow;
+    /*Google: How to make a better background effect*/
+    background: linear-gradient(92.88deg,
+    rgb(69, 94, 181) 9.16%,
+    rgb(86, 67, 204) 43.89%,
+    rgb(103, 63, 215) 64.72%);
     padding: 15px 35px;
-    color: black;
+    color: #ffffff;
     border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: rgba(255,255,255,255) 10px 10px 5px 12px;
 }
 
 Button:hover {
-    color: yellow;
-    background: black;
-    transition: 1s;
+    filter: blur(calc(var(--Button-height) / 6)); /*https://codepen.io/gayane-gasparyan/pen/jOmaBQK?editors=1100*/
+    color: white;
+    background: #230046;
+    transition: .5s;
 }
 
 Button:hover:after{
-    background: yellow;
-    color: black;
+    background: #320064;
+    color: white;
     transition: 1s;
 }
 
 /*--[[ De binnenkant van de website ]]--*/
 .box {
-    margin-top: 20px;
     background-color: #383838;
     padding: 20px 20px;
     border-radius: 10px; /*geeft border*/
@@ -51,24 +73,38 @@ Button:hover:after{
 }
 
 .sticky-section {
-    overflow: hidden;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     position:fixed;
     top:0px; /*Navbar is bovenaan*/
     width: 100%;
     color: white;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
+    backdrop-filter:  ;
+    text-decoration: none;
 }
 /*nav bar content*/
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-top: 10px;
     font-weight: bold; 
-    padding: 10px 5%;
+    flex-direction: column;
+    float: center;
+    size: 100%;
+    backdrop-filter: blur(100);
 }
 
+nav li {
+    font-size: 2.0rem;
+    width: auto;
+    color: #111;
+    padding: 5px 15px;
+    margin: 2px 0;
+    display: inline-block;
+    text-align: center;
+    margin: 0px 20px;
+}
 
 /*De knoppen in de nav bar*/
 nav a {
@@ -76,10 +112,11 @@ nav a {
     font-weight: bold; /*Maakt het BOLD*/
     display: inline-block;
     padding: 10px 10 px;
+    text-align: center;
 }
 
 nav a:hover { /*Hover effect*/
-    color: yellow;
+    color: rgb(0, 0, 0);
     transition: .5s;
 }
 
