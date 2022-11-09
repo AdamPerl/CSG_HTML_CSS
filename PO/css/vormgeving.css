@@ -1,85 +1,90 @@
 /*
     
-https://www.w3schools.com/cssref/css_selectors.php -- OBJ::________
- color scheme van linear
- background: rgb(0, 2, 18);
-
+ color scheme van https://linear.app/
+https://www.w3schools.com/howto/howto_css_blog_layout.asp
+https://www.w3schools.com/howto/howto_css_zig_zag_layout.asp
 
 */
 
 
-
-
-
-/* --[[ Globale dingen]]--  (deco zodat het mij duidelijker opvalt)*/
+/* --[[ Globale dingen]]--  (decoratie zodat het mij duidelijker opvalt)*/
 * {
     color: #ffffff;
 }
 
-body {
-    background: rgb(0, 2, 18);
-    margin: 0;
-    padding: 0;
-    -webkit-font-smoothing: anitialized;
+
+.rightText {
+    float: left;
+    width: 50%;
+    white-space: wrap;
+    margin-bottom: .4em;
+    align-self: center;
 }
 
+body {
+    background: rgba(0,0,0,1);
+    margin: 0;
+    padding: 0;
+}
+
+
 body #main {
-    padding: 5%; /*zodat de Boxes niet in de middel zijn*/
-    margin-top: 100px; /*Zodat de nav bar niet over de boxes heen gaan*/
+    padding: 5%, 500px; /*zodat de Boxes niet in de middel zijn*/
 }
 
 Button {
     border: none;
-    /*Google: How to make a better background effect*/
     background: linear-gradient(92.88deg,
-    rgb(69, 94, 181) 9.16%,
-    rgb(86, 67, 204) 43.89%,
-    rgb(103, 63, 215) 64.72%);
+    rgba(69, 94, 181, 1) 9.16%,
+    rgba(86, 67, 204, 1) 43.89%,
+    rgba(103, 63, 215, 1) 64.72%);
     padding: 15px 35px;
-    color: #ffffff;
+    color: rgba(255,255,255,1);
     border-radius: 10px;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: rgba(255,255,255,255) 10px 10px 5px 12px;
 }
 
 Button:hover {
-    filter: blur(calc(var(--Button-height) / 6)); /*https://codepen.io/gayane-gasparyan/pen/jOmaBQK?editors=1100*/
-    color: white;
-    background: #230046;
+    backdrop-filter: blur(50px);
     transition: .5s;
-}
-
-Button:hover:after{
-    background: #320064;
-    color: white;
-    transition: 1s;
+    text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
 }
 
 /*--[[ De binnenkant van de website ]]--*/
 .box {
-    background-color: #383838;
+    background-color: rgba(56, 56, 56,1);
     padding: 20px 20px;
-    border-radius: 10px; /*geeft border*/
+    border-radius: 10px; /*geeft ronde border*/
     margin: 5% 5%;
+    height: 600px;
 }
 
-
+.ImageLeft {
+    margin: nil;
+    display: flex;
+    align-items: center;
+    float: right;
+    width: 40%;
+    height: auto;
+    top: 50%;
+}
 
 /*--[[ nav bar Css ]]-- */
 .Name {
     color: aqua;
+    padding-left: 10px;
     /*De naam/icon van de website*/
 }
 
-.sticky-section {
-    margin-bottom: 25px;
+#sticky-section {
+    margin-bottom: 0px;
     position:fixed;
     top:0px; /*Navbar is bovenaan*/
     width: 100%;
-    color: white;
-    background-color: rgb(255, 0, 0);
-    backdrop-filter:  ;
+    color: rgba(255,255,255,1);
+    background-color: rgba(255, 0, 0, 0,9);
+    backdrop-filter: blur(20px);
     text-decoration: none;
 }
 /*nav bar content*/
@@ -92,11 +97,10 @@ nav {
     flex-direction: column;
     float: center;
     size: 100%;
-    backdrop-filter: blur(100);
 }
 
 nav li {
-    font-size: 2.0rem;
+    font-size: larger;
     width: auto;
     color: #111;
     padding: 5px 15px;
@@ -118,6 +122,7 @@ nav a {
 nav a:hover { /*Hover effect*/
     color: rgb(0, 0, 0);
     transition: .5s;
+    text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
 }
 
 /*Geeft de "current page" een andere kleur*/
@@ -133,7 +138,16 @@ Footer {
     text-align: center;
     margin-top: 20px;
     background-color: black;
-    width: 100%;
+    width: 90%;
 }
 
 
+
+/*Special effects
+
+https://www.w3schools.com/howto/howto_css_glowing_text.asp
+*/
+.Glow {
+
+    text-shadow: 0 0 10px #fff, 0 0 50px #000000;
+}
