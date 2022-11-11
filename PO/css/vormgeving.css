@@ -18,11 +18,15 @@ Font:
 
 
 */
+@font-face {
+    font-family: 'Fira Mono';
+    src: url(../Fira_Mono/FiraMono-Regular.ttf) format('ttf');
+}
 
 :root { /*Variables*/
     --font-family-primary: 'Vollkorn', serif;
     --font-family-secondary: 'PT Sans', sans-serif;
-    --font-family-tertiary: 'Fira Mono', url(../Fira_Mono/FiraMono-Regular.ttf);
+    --font-family-tertiary: 'Fira Mono';
 }
 
 /* --[[ Globale dingen]]--  (decoratie zodat het mij duidelijker opvalt)*/
@@ -41,6 +45,7 @@ h1 {
     font-weight: 300;
     font-size: 50px;
 }
+
 .rightText {
     float: left;
     width: 50%;
@@ -51,9 +56,29 @@ h1 {
 }
 
 body {
-    background: rgba(0,0,0,1);
+    background: linear-gradient(
+    rgb(39, 39, 39),
+    rgb(120, 81, 169),
+    rgb(50, 50, 50),
+    rgb(121, 81, 169)
+    );
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
     margin: 0;
     padding: 0;
+}
+/*https://codepen.io/P1N2O/pen/pyBNzX*/
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 
@@ -100,10 +125,6 @@ Button:hover {
     display: block;
 }
 
-.boxImageBackground {
-
-}
-
 .ImageLeft {
     display: flex;
     align-items: center;
@@ -138,7 +159,6 @@ Button:hover {
     max-height: 300px;
     border-radius: var(--border-radius-primary);
     object-fit: cover;
-    
 }
 
 
@@ -175,9 +195,9 @@ nav a {
 }
 
 nav a:hover { /*Hover effect*/
-    color: rgb(47, 47, 47);
+    color: rgb(0, 0, 0);
     transition: .5s;
-    text-shadow: 0 0 50px rgb(0, 0, 0); /*google*/
+    text-shadow: 0 0 50px rgb(255, 255, 255); /*google*/
 }
 
 /*Geeft de "current page" een andere kleur*/
@@ -196,6 +216,9 @@ Footer {
     width: 90%;
 }
 
+.FooterList i {
+    background-color: brown;
+}
 
 
 /*Special effects
