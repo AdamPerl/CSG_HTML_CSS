@@ -1,24 +1,53 @@
 /*
     
- color scheme van https://linear.app/
-https://www.w3schools.com/howto/howto_css_blog_layout.asp
-https://www.w3schools.com/howto/howto_css_zig_zag_layout.asp
+ color scheme van:
+    https://linear.app/
+    https://www.w3schools.com/howto/howto_css_blog_layout.asp
+    https://www.w3schools.com/howto/howto_css_zig_zag_layout.asp
+
+
+root:
+    https://developer.mozilla.org/en-US/docs/Web/CSS/:root
+
+Font:
+    https://fonts.google.com/specimen/Fira+Mono
+    https://www.w3schools.com/css/css3_fonts.asp
+
+
+
+
 
 */
 
+:root { /*Variables*/
+    --font-family-primary: 'Vollkorn', serif;
+    --font-family-secondary: 'PT Sans', sans-serif;
+    --font-family-tertiary: 'Fira Mono', url(../Fira_Mono/FiraMono-Regular.ttf);
+}
 
 /* --[[ Globale dingen]]--  (decoratie zodat het mij duidelijker opvalt)*/
 * {
     color: #ffffff;
 }
 
+p {
+    font-size: 25px;
+    font-family: var(--font-family-tertiary);
+    font-weight: 300;
+}
 
+h1 {
+    font-family: var(--font-family-primary);
+    font-weight: 300;
+    font-size: 50px;
+}
 .rightText {
     float: left;
     width: 50%;
     white-space: wrap;
     margin-bottom: .4em;
     align-self: center;
+    margin-top: 0px;
 }
 
 body {
@@ -29,7 +58,15 @@ body {
 
 
 body #main {
-    padding: 5%, 500px; /*zodat de Boxes niet in de middel zijn*/
+    padding: 5%; /*zodat de Boxes niet in de middel zijn*/
+}
+
+.Left {
+    float: left;
+}
+
+.right {
+    float: right;
 }
 
 Button {
@@ -40,28 +77,34 @@ Button {
     rgba(103, 63, 215, 1) 64.72%);
     padding: 15px 35px;
     color: rgba(255,255,255,1);
-    border-radius: 10px;
+    border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
 }
+
 
 Button:hover {
     backdrop-filter: blur(50px);
     transition: .5s;
     text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
+    transform: scale(1.05);
 }
 
 /*--[[ De binnenkant van de website ]]--*/
 .box {
-    background-color: rgba(56, 56, 56,1);
+    background-color: rgba(29, 29, 29,1);
     padding: 20px 20px;
     border-radius: 10px; /*geeft ronde border*/
     margin: 5% 5%;
     height: 600px;
+    display: block;
+}
+
+.boxImageBackground {
+
 }
 
 .ImageLeft {
-    margin: nil;
     display: flex;
     align-items: center;
     float: right;
@@ -87,6 +130,18 @@ Button:hover {
     backdrop-filter: blur(20px);
     text-decoration: none;
 }
+
+
+#LuaCode {
+    float: right;
+    width: 50%;
+    max-height: 300px;
+    border-radius: var(--border-radius-primary);
+    object-fit: cover;
+    
+}
+
+
 /*nav bar content*/
 
 nav {
@@ -102,7 +157,7 @@ nav {
 nav li {
     font-size: larger;
     width: auto;
-    color: #111;
+    color: rgba(17, 17, 17, 1);
     padding: 5px 15px;
     margin: 2px 0;
     display: inline-block;
@@ -120,9 +175,9 @@ nav a {
 }
 
 nav a:hover { /*Hover effect*/
-    color: rgb(0, 0, 0);
+    color: rgb(47, 47, 47);
     transition: .5s;
-    text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
+    text-shadow: 0 0 50px rgb(0, 0, 0); /*google*/
 }
 
 /*Geeft de "current page" een andere kleur*/
