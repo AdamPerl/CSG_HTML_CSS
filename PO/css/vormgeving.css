@@ -34,6 +34,26 @@ Font:
     color: #ffffff;
 }
 
+body {
+    background: linear-gradient(
+    rgb(39, 39, 39),
+    rgb(120, 81, 169),
+    rgb(50, 50, 50),
+    rgb(121, 81, 169)
+    );
+    background-image: url('/PO/images/f75c6908eb48f73fca11fcdf5d9b2741.mp4');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    margin: 0;
+    padding: 0;
+}
+
+
+body #main {
+    padding: 5%; /*zodat de Boxes niet in de middel zijn*/
+}
+
 p {
     font-size: 25px;
     font-family: var(--font-family-tertiary);
@@ -53,37 +73,6 @@ h1 {
     margin-bottom: .4em;
     align-self: center;
     margin-top: 0px;
-}
-
-body {
-    background: linear-gradient(
-    rgb(39, 39, 39),
-    rgb(120, 81, 169),
-    rgb(50, 50, 50),
-    rgb(121, 81, 169)
-    );
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-	height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-/*https://codepen.io/P1N2O/pen/pyBNzX*/
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-
-body #main {
-    padding: 5%; /*zodat de Boxes niet in de middel zijn*/
 }
 
 .Left {
@@ -129,8 +118,9 @@ Button:hover {
     display: flex;
     align-items: center;
     float: right;
-    width: 40%;
-    height: auto;
+    width: auto;
+    height: 80%;
+    padding: 0px 0px 0px 0px;
     top: 50%;
 }
 

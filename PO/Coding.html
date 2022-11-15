@@ -27,10 +27,19 @@
         <!--Middelste stuk-->
         <div id="Main">
             <div class="box">
-                <h1 class="rightText">Create everything</h1>
-                <img src="/PO/images/topic_scripting.jpg" class="ImageLeft" alt="LuaCode" id="LuaCode"/>
-                <p class="rightText">Roblox studio; a 3d game engine used to make roblox games.</p>
-                <button >test</button>
+                <h1>Types of scripts</h1>
+                <img src="images/vogel.jpg" class="ImageLeft" alt="dierentuinvogel"/>
+                <p>There are 3 types of scripts.</p>
+                <ul> <!--<p> zodat de size groter is, ik ben het te lui om het ook in de css te zetten :p -->
+                    <li><p>LocalScripts: Calculated by the client. Used for UI, Visual Effects, Playerinput, etc...</p></li>
+                    <li><p>Script: A script calculated by the server. Used for things that are visible to all clients. Example: moving objects.</p></li>
+                    <li><p>ModuleScript: A type of script that every Script can use. ModuleScripts are often used in things that happen repeatedly. Such as a camerashake.</p></li>
+                </ul>
+                <button>More about coding</button>
+            </div>
+            <div class="box">
+                <h1>Modulescripts</h1>
+                <p>ModuleScripts are super usefull. They can be used to create or inprove functions, serverwide. All you need to do is require the script. (local Module = require(...) An example is Mockparts. This is a commonly used script, which you can find on the internet. This modulescript is usefull when "creating" new parts. Currently, creating new instances is wery laggy, precicly when you create tons. Mockparts improves this. Instead of creating new instances, the script generates instances slowly far away in the world. When needed, it moves the parts to the orientation and position specified. Doing so, you can create tons of bullets for weapons!</p>
             </div>
         </div>
 

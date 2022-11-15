@@ -10,3 +10,5 @@ Bij problemen kijk je voor de *status* van GitPod op [GitPodStatus](https://www.
 1. Even geduld: er wordt nu een eigen werkomgeving voor je gemaakt
 1. Vergeet niet je project te *pinnen* onder *Workspaces*
 1. Aan de slag! *Push* regelmatig naar **GitHub** via *Source Control*
+
+*Ik* was hier
