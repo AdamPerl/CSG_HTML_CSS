@@ -19,7 +19,7 @@ Font:
 
 */
 @font-face {
-    font-family: 'Fira Mono'; src: url(/PO/Fira_Mono/FiraMono-Regular.ttf) format('ttf');
+    font-family: Fira Mono; src: url(/PO/Fira_Mono/FiraMono-Regular.ttf) format('ttf');
 }
 
 :root { /*Variables*/
@@ -55,7 +55,7 @@ body {
     z-index: 10;
     backdrop-filter: invert(80%);
     padding: 0%,5%;
-    color: black;
+    color: rgb(255, 0, 0);
     padding: 10px 10px;
 }
 
@@ -76,7 +76,6 @@ body {
 
 p {
     font-size: 25px;
-    font-family: var(--font-family-tertiary);
     font-weight: 300;
 }
 
@@ -120,7 +119,8 @@ Button {
 Button:hover {
     transition: .5s;
     text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
-    transform: scale(1.05);
+    transform: scale(1.05) rotate(90deg);
+
 }
 
 /*nav bar content*/
@@ -159,6 +159,7 @@ nav a:hover { /*Hover effect*/
     color: rgb(0, 0, 0);
     transition: .5s;
     text-shadow: 0 0 50px rgb(255, 255, 255); /*google*/
+    font-family: Fira Mono;
 }
 
 /*Geeft de "current page" een andere kleur*/
