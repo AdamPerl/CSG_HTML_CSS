@@ -19,14 +19,12 @@ Font:
 
 */
 @font-face {
-    font-family: 'Fira Mono';
-    src: url(../Fira_Mono/FiraMono-Regular.ttf) format('ttf');
+    font-family: 'Fira Mono'; src: url(/PO/Fira_Mono/FiraMono-Regular.ttf) format('ttf');
 }
 
 :root { /*Variables*/
     --font-family-primary: 'Vollkorn', serif;
     --font-family-secondary: 'PT Sans', sans-serif;
-    --font-family-tertiary: 'Fira Mono';
 }
 
 /* --[[ Globale dingen]]--  (decoratie zodat het mij duidelijker opvalt)*/
@@ -37,18 +35,43 @@ Font:
 body {
     margin: 0;
     padding: 0;
+    
 }
+
 /*https://www.w3schools.com/howto/howto_css_fullscreen_video.asp*/
 #myVideo {
+    z-index: -10; /*De plaatje is achteraan*/
     position: fixed;
     right: 0;
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
+
 }
 
-body #main {
-    padding: 5%; /*zodat de Boxes niet in de middel zijn*/
+#VideoText {
+    text-align: center;
+    margin-top: 300px;
+    z-index: 10;
+    backdrop-filter: invert(80%);
+    padding: 0%,5%;
+    color: black;
+    padding: 10px 10px;
+}
+
+
+#VideoTextRightDown {
+    float: right;
+    margin-top: 300px;
+    margin-right: 50px;
+    backdrop-filter: blur(100px);
+    padding: 10px;
+}
+
+#Main {
+    padding: 5%; /*zodat de Boxes in de middel zijn*/
+    margin-top:600px;
+    backdrop-filter: blur(10px);
 }
 
 p {
@@ -95,59 +118,10 @@ Button {
 
 
 Button:hover {
-    backdrop-filter: blur(50px);
     transition: .5s;
     text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
     transform: scale(1.05);
 }
-
-/*--[[ De binnenkant van de website ]]--*/
-.box {
-    background-color: rgba(29, 29, 29,1);
-    padding: 20px 20px;
-    border-radius: 10px; /*geeft ronde border*/
-    margin: 5% 5%;
-    height: 600px;
-    display: block;
-}
-
-.ImageLeft {
-    display: flex;
-    align-items: center;
-    float: right;
-    width: auto;
-    height: 80%;
-    padding: 0px 0px 0px 0px;
-    top: 50%;
-}
-
-/*--[[ nav bar Css ]]-- */
-.Name {
-    color: aqua;
-    padding-left: 10px;
-    /*De naam/icon van de website*/
-}
-
-#sticky-section {
-    margin-bottom: 0px;
-    position:fixed;
-    top:0px; /*Navbar is bovenaan*/
-    width: 100%;
-    color: rgba(255,255,255,1);
-    background-color: rgba(255, 0, 0, 0,9);
-    backdrop-filter: blur(20px);
-    text-decoration: none;
-}
-
-
-#LuaCode {
-    float: right;
-    width: 50%;
-    max-height: 300px;
-    border-radius: var(--border-radius-primary);
-    object-fit: cover;
-}
-
 
 /*nav bar content*/
 
@@ -192,18 +166,66 @@ nav a:hover { /*Hover effect*/
     color: yellow;
 }
 
+#sticky-section {
+    z-index: 100;
+    margin-bottom: 0px;
+    position:fixed;
+    top:0px; /*Navbar is bovenaan*/
+    width: 100%;
+    color: rgba(255,255,255,1);
+    background-color: rgba(255, 0, 0, 0,9);
+    backdrop-filter: blur(20px);
+    text-decoration: none;
+}
+
+/*--[[ De binnenkant van de website ]]--*/
+.box {
+    z-index: 1; /*nav bar glitch fix*/
+    background-color: rgba(29, 29, 29,1);
+    backdrop-filter: blur(5px);
+    padding: 20px 20px;
+    border-radius: 10px; /*geeft ronde border*/
+    margin: 5% 5%;
+    height: 600px;
+    display: block;
+}
+
+.ImageLeft {
+    display: flex;
+    align-items: center;
+    float: right;
+    width: auto;
+    height: 80%;
+    padding: 0px 0px 0px 0px;
+    top: 50%;
+}
+
+/*--[[ nav bar Css ]]-- */
+.Name {
+    color: aqua;
+    padding-left: 10px;
+    /*De naam/icon van de website*/
+}
+
+#LuaCode {
+    float: right;
+    width: 50%;
+    max-height: 300px;
+    border-radius: var(--border-radius-primary);
+    object-fit: cover;
+}
 
 /*--[[ Footers zijn cool ]]--*/
 Footer {
     height: 50px;
     padding: 5%;
     text-align: center;
-    margin-top: 20px;
     background-color: black;
     width: 90%;
 }
 
-.FooterList i {
+.FooterList li {
+    list-style-type: none;
     background-color: brown;
 }
 
@@ -213,6 +235,5 @@ Footer {
 https://www.w3schools.com/howto/howto_css_glowing_text.asp
 */
 .Glow {
-
     text-shadow: 0 0 10px #fff, 0 0 50px #000000;
 }
