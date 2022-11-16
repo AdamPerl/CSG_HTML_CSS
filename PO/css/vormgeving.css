@@ -1,7 +1,9 @@
 /*
     
- color scheme van:
+color scheme van:
     https://linear.app/
+
+Random stuff:
     https://www.w3schools.com/howto/howto_css_blog_layout.asp
     https://www.w3schools.com/howto/howto_css_zig_zag_layout.asp
 
@@ -30,12 +32,12 @@ Font:
 /* --[[ Globale dingen]]--  (decoratie zodat het mij duidelijker opvalt)*/
 * {
     color: #ffffff;
+    text-shadow: 0 0 5px rgb(0, 0, 0); /*Readabily with white text*/
 }
 
 body {
     margin: 0;
     padding: 0;
-    
 }
 
 /*https://www.w3schools.com/howto/howto_css_fullscreen_video.asp*/
@@ -53,7 +55,6 @@ body {
     text-align: center;
     margin-top: 300px;
     z-index: 10;
-    backdrop-filter: invert(80%);
     padding: 0%,5%;
     color: rgb(255, 0, 0);
     padding: 10px 10px;
@@ -119,8 +120,7 @@ Button {
 Button:hover {
     transition: .5s;
     text-shadow: 0 0 10px #fff, 0 0 70px #ffffff;
-    transform: scale(1.05) rotate(90deg);
-
+    transform: scale(1.05) rotate(1deg);
 }
 
 /*nav bar content*/
@@ -167,14 +167,14 @@ nav a:hover { /*Hover effect*/
     color: yellow;
 }
 
-#sticky-section {
+#NavBar {
     z-index: 100;
     margin-bottom: 0px;
     position:fixed;
     top:0px; /*Navbar is bovenaan*/
     width: 100%;
     color: rgba(255,255,255,1);
-    background-color: rgba(255, 0, 0, 0,9);
+    background-color: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(20px);
     text-decoration: none;
 }
@@ -205,6 +205,7 @@ nav a:hover { /*Hover effect*/
 .Name {
     color: aqua;
     padding-left: 10px;
+    right: 0;
     /*De naam/icon van de website*/
 }
 
@@ -236,5 +237,5 @@ Footer {
 https://www.w3schools.com/howto/howto_css_glowing_text.asp
 */
 .Glow {
-    text-shadow: 0 0 10px #fff, 0 0 50px #000000;
+    text-shadow:  0 0 5px rgb(0, 0, 0), 0 0 50px #000000;
 }
