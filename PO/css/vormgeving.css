@@ -48,7 +48,6 @@ body {
     bottom: 0;
     min-width: 100%;
     min-height: 100%;
-
 }
 
 #VideoText {
@@ -63,7 +62,7 @@ body {
 
 #VideoTextRightDown {
     float: right;
-    margin-top: 300px;
+    margin-top: 100px; /*kan ik niet goed inschatten*/
     margin-right: 50px;
     backdrop-filter: blur(100px);
     padding: 10px;
@@ -173,8 +172,8 @@ nav a:hover { /*Hover effect*/
     position:fixed;
     top:0px; /*Navbar is bovenaan*/
     width: 100%;
-    color: rgba(255,255,255,1);
-    background-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255,255,255, 1);
+    background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(20px);
     text-decoration: none;
 }
