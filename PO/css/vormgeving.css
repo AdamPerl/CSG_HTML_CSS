@@ -12,8 +12,9 @@ Font:
     https://fonts.google.com/specimen/Fira+Mono
     https://www.w3schools.com/css/css3_fonts.asp
 
-Glow:
-    https://www.w3schools.com/howto/howto_css_glowing_text.asp
+Effects:
+    GLOW:   https://www.w3schools.com/howto/howto_css_glowing_text.asp
+    STRONG: https://codepen.io/alvarotrigo/pen/oNpvMbb
 
 Video background:
     https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
@@ -81,13 +82,11 @@ body {
 
 p {
     font-size: 25px;
-    font-weight: 300;
     font-family: 'Fira Mono';
 }
 
 h1 {
     font-family: 'Arial';
-    font-weight: 300;
     font-size: 50px;
 }
 
@@ -204,7 +203,7 @@ nav a:hover { /*Hover effect*/
 
 .ImageRight {
     display: flex;
-    height: 70%;
+    height: 50%;
     float: right;
 }
 
@@ -221,7 +220,6 @@ nav a:hover { /*Hover effect*/
     float: right;
     width: 50%;
     max-height: 300px; 
-    border-radius: var(--border-radius-primary);
     object-fit: cover;
 }
 
@@ -247,14 +245,13 @@ strong {
   }
   
 strong::before {
-    /* Highlight color */
-    background-color: #004517;
+    background-color: #2d0038;
     content: "";
     position: absolute;
-    width: calc(100% + 4px);
+    width: calc(100% + 10px);
     height: 60%;
-    left: -2px;
+    left: -5px;
     bottom: 0;
     z-index: -1;
-    transform: rotate(-2deg);
+    transform: rotate(-3deg); 
 }
