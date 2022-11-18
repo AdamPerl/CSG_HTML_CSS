@@ -4,7 +4,7 @@
 knop color scheme van:
     https://linear.app/ - super coole website
 
-Layout:
+Layout: - erin gekeken en wat gebruikt/geleert
     https://www.w3schools.com/howto/howto_css_blog_layout.asp
     https://www.w3schools.com/howto/howto_css_zig_zag_layout.asp
 
@@ -20,7 +20,10 @@ Video background:
     https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 
 VoorbeeldenVanVNR:
-    Fonts (fonts.css heeft op regel 116 en 111 een " maar de rest heeft een '?
+    Fonts (fonts.css heeft op regel 116 en 111 een " maar de rest heeft een '?)
+
+Plaatjes:
+    Google Images
 
 
 Extra:
@@ -45,7 +48,7 @@ body {
 }
 
 #Video {
-    z-index: -10; /*De plaatje is achteraan*/
+    z-index: -10; /*De video is achteraan*/
     position: fixed;
     right: 0;
     bottom: 0;
@@ -73,7 +76,7 @@ body {
 
 #Main, #MainIndex  {
     padding: 5%; /*zodat de Boxes in de middel zijn (en niet de rand aanraken)*/
-    backdrop-filter: blur(5px); /*Zodat de achtergrond blur krijgt en er emeer op de boxes worden gefocuseerd*/
+    backdrop-filter: blur(5px); /*Zodat de achtergrond blur krijgt en er meer op de boxes worden gefocuseerd*/
 }
 
 /*Ziet er cooler uit 😎*/
@@ -205,6 +208,10 @@ nav a:hover { /*Hover effect*/
     display: flex;
     height: 50%;
     float: right;
+}
+
+#UIImage {
+    height: 60%;
 }
 
 /*--[[ nav bar Css ]]-- */
