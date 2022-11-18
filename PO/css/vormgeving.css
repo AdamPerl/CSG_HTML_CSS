@@ -66,13 +66,18 @@ body {
     margin-right: 50px;
     backdrop-filter: blur(100px);
     padding: 10px;
+    border: 4px dashed rgb(0, 0, 0);  
+    padding:0.03em 0.25em;
 }
 
-#Main {
+#Main, #MainIndex  {
     padding: 5%; /*zodat de Boxes in de middel zijn (en niet de rand aanraken)*/
-    margin-top:600px; /*Zodat je de video ziet*/
-    backdrop-filter: blur(10px);/*Zodat de achtergrond blur krijgt en er emeer op de boxes worden gefocuseerd*/
+    backdrop-filter: blur(5px); /*Zodat de achtergrond blur krijgt en er emeer op de boxes worden gefocuseerd*/
 }
+
+/*Ziet er cooler uit 😎*/
+#main       { margin-top:0px   }
+#MainIndex  { margin-top:150px }
 
 p {
     font-size: 25px;
@@ -124,7 +129,6 @@ Button:hover {
 }
 
 /*nav bar content*/
-
 nav {
     display: flex;
     align-items: center;
@@ -153,6 +157,10 @@ nav a {
     display: inline-block;
     padding: 10px 10 px;
     text-align: center;
+    background-color: linear-gradient(92.88deg, 
+    rgba(69, 94, 181, 1) 9.16%,
+    rgba(86, 67, 204, 1) 43.89%,
+    rgba(103, 63, 215, 1) 64.72%);
 }
 
 nav a:hover { /*Hover effect*/
@@ -180,16 +188,19 @@ nav a:hover { /*Hover effect*/
 }
 
 /*--[[ De binnenkant van de website ]]--*/
-.box {
-    z-index: 1; /*nav bar glitch fix*/
+.box, .boxSmall, .boxBig {
+    z-index: 1; /*nav bar glitch fix, als het al niet gefixtst is*/
     background-color: rgba(29, 29, 29,1);
     backdrop-filter: blur(5px);
     padding: 20px 20px;
     border-radius: 10px; /*geeft ronde border*/
     margin: 5% 5%;
-    height: 600px;
     display: block;
 }
+
+.boxSmall   { height: 400px }
+.box        { height: 600px }
+.boxBig     { height: 800px }
 
 .ImageRight {
     display: flex;
@@ -223,13 +234,27 @@ Footer {
     width: 90%;
 }
 
-.FooterList li {
-    list-style-type: none; /*Haalt de punten weg
-    */
-}
+.FooterList li { list-style-type: none } /*Haalt de punten weg*/
+
 
 
 /*Special effects*/
-.Glow {
-    text-shadow:  0 0 5px rgb(0, 0, 0), 0 0 50px #000000;
+.Glow { text-shadow:  0 0 5px rgb(0, 0, 0), 0 0 50px #000000 }
+
+
+strong {
+    position: relative;
+  }
+  
+strong::before {
+    /* Highlight color */
+    background-color: #004517;
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
 }
