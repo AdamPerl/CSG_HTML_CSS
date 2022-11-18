@@ -1,33 +1,35 @@
 /*
-    
-color scheme van:
-    https://linear.app/
+    /-!REFERENTIES!-\ (wow)
 
-Random stuff:
+knop color scheme van:
+    https://linear.app/ - super coole website
+
+Layout:
     https://www.w3schools.com/howto/howto_css_blog_layout.asp
     https://www.w3schools.com/howto/howto_css_zig_zag_layout.asp
-
-
-root:
-    https://developer.mozilla.org/en-US/docs/Web/CSS/:root
 
 Font:
     https://fonts.google.com/specimen/Fira+Mono
     https://www.w3schools.com/css/css3_fonts.asp
 
+Glow:
+    https://www.w3schools.com/howto/howto_css_glowing_text.asp
+
+Video background:
+    https://www.w3schools.com/howto/howto_css_fullscreen_video.asp
 
 
-
+Extra:
+    W3schools gebruikt om te leren en google als ik iets vergat.
+    Zoals hoe je een border rond maakt. 
+    De rest kopieer ik dus kleine dingen van google en niet hele scripts.
+    Meeste maakte ik het zelf
 
 */
 @font-face {
     font-family: Fira Mono; src: url(/PO/Fira_Mono/FiraMono-Regular.ttf) format('ttf');
 }
 
-:root { /*Variables*/
-    --font-family-primary: 'Vollkorn', serif;
-    --font-family-secondary: 'PT Sans', sans-serif;
-}
 
 /* --[[ Globale dingen]]--  (decoratie zodat het mij duidelijker opvalt)*/
 * {
@@ -40,8 +42,7 @@ body {
     padding: 0;
 }
 
-/*https://www.w3schools.com/howto/howto_css_fullscreen_video.asp*/
-#myVideo {
+#Video {
     z-index: -10; /*De plaatje is achteraan*/
     position: fixed;
     right: 0;
@@ -192,12 +193,11 @@ nav a:hover { /*Hover effect*/
 
 .ImageLeft {
     display: flex;
+    justify-content: center;
     align-items: center;
     float: right;
-    width: auto;
-    height: 80%;
-    padding: 0px 0px 0px 0px;
-    top: 50%;
+    height: 70%;
+    text-align: center;
 }
 
 /*--[[ nav bar Css ]]-- */
@@ -212,7 +212,7 @@ nav a:hover { /*Hover effect*/
 #LuaCode {
     float: right;
     width: 50%;
-    max-height: 300px;
+    max-height: 300px; 
     border-radius: var(--border-radius-primary);
     object-fit: cover;
 }
@@ -227,15 +227,12 @@ Footer {
 }
 
 .FooterList li {
-    list-style-type: none;
-    background-color: brown;
+    list-style-type: none; /*Haalt de punten weg
+    */
 }
 
 
-/*Special effects
-
-https://www.w3schools.com/howto/howto_css_glowing_text.asp
-*/
+/*Special effects*/
 .Glow {
     text-shadow:  0 0 5px rgb(0, 0, 0), 0 0 50px #000000;
 }
