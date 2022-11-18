@@ -95,6 +95,7 @@ h1 {
 
 .Left {
     float: left;
+    margin-top: 50px;
 }
 
 .right {
@@ -192,10 +193,8 @@ nav a:hover { /*Hover effect*/
 
 .ImageRight {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 70%;
-    text-align: center;
+    float: right;
 }
 
 /*--[[ nav bar Css ]]-- */
